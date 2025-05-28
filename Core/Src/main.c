@@ -158,7 +158,6 @@ int main(void)
 	{
 	    if(play_count >= max_plays)
 	    {
-	        // Фінальне танцювальне шоу після 3-х програвань
 	        for(int dance = 0; dance < 6; dance++)
 	        {
 	            HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_14, GPIO_PIN_SET);
@@ -172,17 +171,13 @@ int main(void)
 	            HAL_Delay(30);
 	        }
 
-	        // Фінальне все разом світло
 	        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_SET);
 	        HAL_Delay(300);
 	        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
-	        HAL_Delay(2000); // Довга пауза перед повторенням танцю
+	        HAL_Delay(2000);
 	        continue;
 	    }
 
-	    // Мелодія "Twinkle Twinkle Little Star" з світломузикою
-
-	    // Twinkle, twinkle, little star
 	    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET);
 	    CS43L22_Beep(C5, quarter_note_duration);
 	    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_RESET);
@@ -218,7 +213,6 @@ int main(void)
 	    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13|GPIO_PIN_14, GPIO_PIN_RESET);
 	    HAL_Delay(100);
 
-	    // How I wonder what you are
 	    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
 	    CS43L22_Beep(F5, quarter_note_duration);
 	    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
@@ -254,7 +248,6 @@ int main(void)
 	    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
 	    HAL_Delay(200);
 
-	    // Повторення другої частини (Up above the world so high)
 	    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
 	    CS43L22_Beep(F5, quarter_note_duration);
 	    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
@@ -290,7 +283,6 @@ int main(void)
 	    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13, GPIO_PIN_RESET);
 	    HAL_Delay(200);
 
-	    // Фінальне блимання після кожного програвання
 	    for(int flash = 0; flash < 3; flash++)
 	    {
 	        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_SET);
@@ -300,7 +292,7 @@ int main(void)
 	    }
 
 	    play_count++;
-	    HAL_Delay(1500); // Пауза між програваннями
+	    HAL_Delay(1500);
 	}
 }
 
