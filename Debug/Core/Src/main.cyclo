@@ -1,0 +1,9 @@
+../Core/Src/main.c:58:6:CS43L22_Init	1
+../Core/Src/main.c:114:6:CS43L22_Beep	1
+../Core/Src/main.c:144:5:main	4
+../Core/Src/main.c:307:13:MX_GPIO_Init	1
+../Core/Src/main.c:329:6:SystemClock_Config	3
+../Core/Src/main.c:361:13:MX_I2C1_Init	2
+../Core/Src/main.c:378:13:MX_I2S3_Init	2
+../Core/Src/main.c:395:13:MX_DMA_Init	1
+../Core/Src/main.c:402:6:Error_Handler	1

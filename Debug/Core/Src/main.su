@@ -1,0 +1,9 @@
+../Core/Src/main.c:58:6:CS43L22_Init	24	static
+../Core/Src/main.c:114:6:CS43L22_Beep	32	static
+../Core/Src/main.c:144:5:main	16	static
+../Core/Src/main.c:307:13:MX_GPIO_Init	48	static
+../Core/Src/main.c:329:6:SystemClock_Config	88	static
+../Core/Src/main.c:361:13:MX_I2C1_Init	8	static
+../Core/Src/main.c:378:13:MX_I2S3_Init	8	static
+../Core/Src/main.c:395:13:MX_DMA_Init	16	static
+../Core/Src/main.c:402:6:Error_Handler	4	static,ignoring_inline_asm
